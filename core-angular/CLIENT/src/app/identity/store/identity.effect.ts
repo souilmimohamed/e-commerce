@@ -8,6 +8,9 @@ import {
   InvokeRegisterAPI,
   LoginAPIFailure,
   LoginAPISuccess,
+  Logout,
+  LogoutFailure,
+  LogoutSuccess,
   RegisterAPIFailure,
   RegisterAPISuccess,
 } from './identity.action';
@@ -49,6 +52,22 @@ export class IdentityEffect {
               this.router.navigate(['/']);
               return RegisterAPISuccess({ access: data.Body });
             } else return RegisterAPIFailure({ message: data.Errors[0] });
+          })
+        );
+      })
+    );
+  });
+
+  logout$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(Logout),
+      switchMap((action) => {
+        return this.identityService.logout().pipe(
+          map((data) => {
+            if (data) {
+              this.router.navigate(['/']);
+              return LogoutSuccess();
+            } else return LogoutFailure();
           })
         );
       })

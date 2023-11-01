@@ -7,6 +7,7 @@ import {
 } from './models/registerModel';
 import { environment } from 'src/environments/environment';
 import { HttpResponseModel } from '../shared/models/httpResponseModel';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -26,5 +27,8 @@ export class IdentityService {
       `${environment.ApiEndpoint}${this.module}/Login`,
       data
     );
+  }
+  logout(): Observable<boolean> {
+    return of(true);
   }
 }

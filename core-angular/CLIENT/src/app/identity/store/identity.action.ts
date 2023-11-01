@@ -36,3 +36,5 @@ export const RegisterAPIFailure = createAction(
   props<{ message: string | ResponseError }>()
 );
 export const Logout = createAction('[Login API] Logout');
+export const LogoutSuccess = createAction('[Login API] Success');
+export const LogoutFailure = createAction('[Login API] Failure');

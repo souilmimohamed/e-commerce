@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { ProductService } from '../services/product.service';
 import { Product } from '../models/product';
 import { Store } from '@ngrx/store';
 import { AddToCart } from '../cart/store/cart.action';
 import { cartItem } from '../models/cart';
+import { IdentityState } from 'src/app/identity/store/identity.reducer';
+import { InvokeAddToWishlistAPI } from '../wishlist/store/wishlist.action';
 
 @Component({
   selector: 'app-product-details',
@@ -20,10 +22,14 @@ export class ProductDetailsComponent implements OnInit {
     })
   );
   product: Product;
+  loggedIn$ = this.identityState.select((state) => state.identity.isLoggedIn);
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private productService: ProductService,
-    private store: Store
+    private store: Store,
+    private identityState: Store<{ identity: IdentityState }>,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +39,19 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addToCart() {
-    const item = new cartItem(this.product, 1);
-    this.store.dispatch(AddToCart({ item }));
+    this.loggedIn$.subscribe((loggedIn) => {
+      if (loggedIn) {
+        const item = new cartItem(this.product, 1);
+        this.store.dispatch(AddToCart({ item }));
+      } else this.router.navigate(['/user/login']);
+    });
+  }
+
+  adToWichlist() {
+    this.loggedIn$.subscribe((loggedIn) => {
+      if (loggedIn)
+        this.store.dispatch(InvokeAddToWishlistAPI({ id: this.product.Id }));
+      else this.router.navigate(['/user/login']);
+    });
   }
 }

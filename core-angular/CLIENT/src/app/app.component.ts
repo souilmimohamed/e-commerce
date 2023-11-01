@@ -19,6 +19,5 @@ export class AppComponent {
   ) {}
   logout() {
     this.store.dispatch(Logout());
-    location.reload();
   }
 }
