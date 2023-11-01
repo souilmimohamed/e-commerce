@@ -1,0 +1,71 @@
+<div class="cart-wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="main-heading mb-10">My wishlist</div>
+        <div class="table-wishlist">
+          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+            <thead>
+              <tr>
+                <th width="45%">Product Name</th>
+                <th width="15%">Unit Price</th>
+                <th width="15%">Stock Status</th>
+                <th width="15%"></th>
+                <th width="10%"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of wishlist$ | async">
+                <td width="45%">
+                  <div class="display-flex align-center">
+                    <div class="img-product">
+                      <img
+                        src="{{ item.PhotoUrl }}"
+                        alt=""
+                        class="mCS_img_loaded"
+                      />
+                    </div>
+                    <a
+                      class="name-product"
+                      [routerLink]="['/products/details', item && item.Id]"
+                      >{{ item.Name }}</a
+                    >
+                  </div>
+                </td>
+                <td width="15%" class="price">${{ item.Price }}</td>
+                <td width="15%">
+                  <span class="in-stock-box" *ngIf="item.InStock"
+                    >In Stock</span
+                  >
+                </td>
+                <td width="15%">
+                  <span class=".not-in-stock-box" *ngIf="!item.InStock"
+                    >Not In Stock</span
+                  >
+                </td>
+                <td width="15%">
+                  <button
+                    class="btn btn-dark"
+                    title="add to cart"
+                    (click)="onaddToCart(item)"
+                  >
+                    <i class="bi bi-cart"></i>
+                  </button>
+                </td>
+                <td width="10%" class="text-center">
+                  <button
+                    class="btn btn-danger"
+                    title="delete"
+                    (click)="onDeleteFromWishlist(item.WishlistItemId)"
+                  >
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

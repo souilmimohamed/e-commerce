@@ -1,0 +1,47 @@
+<div class="row mb-4 d-flex justify-content-between align-items-center">
+  <div class="col-md-2 col-lg-2 col-xl-2">
+    <img
+      src="{{ cartItem && cartItem.image }}"
+      class="img-fluid rounded-3"
+      alt=""
+    />
+  </div>
+  <div class="col-md-4 col-lg-4 col-xl-4">
+    <h6 class="name" (click)="GoToProduct(cartItem!.id)">
+      {{ cartItem && cartItem.name }}
+    </h6>
+    <h6 class="text-black mb-0">{{ cartItem && cartItem.brand }}</h6>
+  </div>
+  <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+    <button
+      class="btn btn-link px-2"
+      (click)="onItemQuantityUpdate(cartItem!.id, cartItem!.quantity - 1)"
+    >
+      <i class="bi bi-file-earmark-minus" style="font-size: 20px"></i>
+    </button>
+
+    <input
+      value="{{ cartItem && cartItem.quantity }}"
+      type="text"
+      disabled
+      class="form-control quantity-input"
+    />
+
+    <button
+      class="btn btn-link px-2"
+      (click)="onItemQuantityUpdate(cartItem!.id, cartItem!.quantity + 1)"
+    >
+      <i class="bi bi-file-earmark-plus" style="font-size: 20px"></i>
+    </button>
+  </div>
+  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+    <h6 class="mb-0">€ {{ cartItem && cartItem.price * cartItem.quantity }}</h6>
+  </div>
+  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+    <button class="btn delete-icon" (click)="onDeleteItem(cartItem!.id)">
+      <i class="bi bi-trash"></i>
+    </button>
+  </div>
+</div>
+
+<hr class="my-4" />

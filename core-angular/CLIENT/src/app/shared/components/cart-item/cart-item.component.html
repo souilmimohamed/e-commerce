@@ -1,0 +1,49 @@
+<hr class="my-4" />
+
+<div class="row mb-4 d-flex justify-content-between align-items-center">
+  <div class="col-md-2 col-lg-2 col-xl-2">
+    <img
+      src="{{ item.photoUrl }}"
+      class="img-fluid rounded-3"
+      alt="Cotton T-shirt"
+    />
+  </div>
+  <div class="col-md-3 col-lg-3 col-xl-3">
+    <h6 class="text-muted">{{ item.category }}</h6>
+    <h6 class="text-black mb-0 name" (click)="goToProduct()">
+      {{ item.name }}
+    </h6>
+  </div>
+  <div class="col-md-3 col-lg-3 col-xl-3 d-flex">
+    <button
+      class="btn btn-link px-2"
+      (click)="itemQuantityUpdate(item.quantity - 1)"
+    >
+      <i class="fa fa-minus"></i>
+    </button>
+
+    <input
+      type="number"
+      class="form-control text-center"
+      value="{{ item.quantity }}"
+      disabled
+    />
+
+    <button
+      class="btn btn-link px-2"
+      (click)="itemQuantityUpdate(item.quantity + 1)"
+    >
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+  <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+    <h6 class="mb-0">€ {{ item.price }}</h6>
+  </div>
+  <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+    <button class="btn btn-danger btn-sm" (click)="removeItem()">
+      <i class="fa fa-trash"></i>
+    </button>
+  </div>
+</div>
+
+<hr class="my-4" />

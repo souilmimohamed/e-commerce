@@ -1,0 +1,68 @@
+<div class="container col-3 border border-dark p-5 rounded">
+  <form [formGroup]="registerForm" (ngSubmit)="register()" autocomplete="off">
+    <div class="mb-2 text-success font-weight-bold" style="font-size: 20px">
+      ENTER YOUR INFO TO REGISTER
+    </div>
+    <div class="form-group">
+      <label>Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email"
+        formControlName="Email"
+      />
+      <p
+        *ngIf="
+          registerForm.get('Email')?.errors &&
+          registerForm.get('Email')?.touched
+        "
+        class="text-danger"
+      >
+        Email is required
+      </p>
+    </div>
+    <div class="form-group">
+      <label>Username</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Username"
+        formControlName="Username"
+      />
+      <p
+        *ngIf="
+          registerForm.get('Username')?.errors &&
+          registerForm.get('Username')?.touched
+        "
+        class="text-danger"
+      >
+        Username is required
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        formControlName="Password"
+      />
+      <p
+        *ngIf="
+          registerForm.get('Password')?.errors &&
+          registerForm.get('Password')?.touched
+        "
+        class="text-danger"
+      >
+        Password is required
+      </p>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-success w-100"
+      [disabled]="registerForm.invalid"
+    >
+      Register
+    </button>
+  </form>
+</div>

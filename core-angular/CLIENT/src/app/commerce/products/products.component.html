@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 filters">
+      <h4>Brands</h4>
+      <div class="list-group">
+        <a
+          class="list-group-item list-group-item-action"
+          *ngFor="let brand of (products$ | async)?.brands"
+          [ngClass]="{ active: selectedBrand === brand.BrandName }"
+          style="cursor: pointer"
+          (click)="brandSelect(brand.BrandName)"
+          >{{ brand.BrandName }}</a
+        >
+      </div>
+      <h4>Categories</h4>
+      <div class="list-group">
+        <a
+          class="list-group-item list-group-item-action"
+          *ngFor="let category of (products$ | async)?.categories"
+          [ngClass]="{ active: selectedCategory === category.CategoryName }"
+          style="cursor: pointer"
+          (click)="categorySelect(category.CategoryName)"
+          >{{ category.CategoryName }}</a
+        >
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="row header-filter">
+        <div class="col-4">
+          <select class="form-control" (change)="sortChange($event)">
+            <option value="" [selected]="filter.SortPrice === ''">
+              no sorting
+            </option>
+            <option value="DESC">sort by price descending</option>
+            <option value="ASC">sort by price ascending</option>
+          </select>
+        </div>
+        <div class="col-4">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="filer by name..."
+            [(ngModel)]="SearchText"
+          />
+        </div>
+        <button class="btn btn-success" (click)="applyFilter()">Apply</button>
+        <button class="btn btn-info ml-2" (click)="resetFilter()">
+          Reset Filters
+        </button>
+      </div>
+      <pagination
+        [boundaryLinks]="true"
+        [directionLinks]="true"
+        [totalItems]="(products$ | async)?.totalCount!"
+        [itemsPerPage]="filter.PageSize"
+        (pageChanged)="pageChanged($event)"
+      ></pagination>
+      <div *ngFor="let product of (products$ | async)?.products">
+        <app-product-card [product]="product"></app-product-card>
+      </div>
+    </div>
+  </div>
+</div>

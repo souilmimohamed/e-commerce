@@ -1,0 +1,18 @@
+.delete-icon {
+  font-size: 20px;
+  color: red;
+}
+
+.quantity-input {
+  width: 50px;
+  text-align: center;
+}
+.name {
+  cursor: pointer;
+  color: #b2beb5;
+  text-decoration: none;
+  font-weight: bold;
+}
+.name:hover {
+  color: #00308f;
+}

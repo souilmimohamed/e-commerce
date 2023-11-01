@@ -1,0 +1,8 @@
+<div class="modal-body">
+  <ul>
+    <li *ngFor="let error of errors">{{ error }}</li>
+  </ul>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" (click)="close()">OK</button>
+</div>

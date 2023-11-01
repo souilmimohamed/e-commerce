@@ -1,0 +1,72 @@
+<div class="container">
+  <legend>Add A New Product</legend>
+  <div class="mb3">
+    <label for="txtProductName" class="from-label">Product Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="txtProductName"
+      [(ngModel)]="productForm.Name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtProductBrand" class="form-label">Product Brand</label>
+    <input
+      type="text"
+      class="form-control"
+      id="txtProductBrand"
+      [(ngModel)]="productForm.Brand"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtProductBrand" class="form-label">Product Category</label>
+    <input
+      type="text"
+      class="form-control"
+      id="txtProductBrand"
+      [(ngModel)]="productForm.Category"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="txtProductDescription" class="form-label">Description</label>
+    <textarea
+      name=""
+      id=""
+      cols="30"
+      rows="5"
+      class="form-control"
+      [(ngModel)]="productForm.Description"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="txtProductPrice" class="form-label">Price</label>
+    <input
+      type="number"
+      class="form-control"
+      id="txtProductPrice"
+      [(ngModel)]="productForm.Price"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="productImage" class="form-label">Image</label><br />
+    <input
+      [hidden]="true"
+      class="display-none"
+      type="file"
+      (change)="onUploadChange($event)"
+      accept=".png, .jpg, .jpeg, .pdf"
+      #hiddenfileinput
+    />
+    <button (click)="hiddenfileinput.click()" class="btn btn-dark">
+      Select image</button
+    ><br /><br />
+    <div class="col-md-3">
+      <img
+        src="{{ productForm.PhotoUrl }}"
+        alt=" no image selected ..."
+        class="image"
+      />
+    </div>
+  </div>
+  <button class="btn btn-success" (click)="save()">Add Product</button>
+</div>

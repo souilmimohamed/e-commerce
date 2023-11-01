@@ -1,0 +1,182 @@
+[
+  {
+    "Name": "Angular Speedster Board 2000",
+    "CategoryId": 1,
+    "BrandId": 1,
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 200,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/sb-ang1.png"
+  },
+  {
+    "Name": "Green Angular Board 3000",
+    "CategoryId": 1,
+    "BrandId": 1,
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+    "Price": 150,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/sb-ang2.png"
+  },
+  {
+    "Name": "Core Board Speed Rush 3",
+    "CategoryId": 1,
+    "BrandId": 2,
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 180,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/sb-core1.png"
+  },
+  {
+    "Name": "Net Core Super Board",
+    "CategoryId": 1,
+    "BrandId": 2,
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 300,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/sb-core2.png"
+  },
+  {
+    "Name": "React Board Super Whizzy Fast",
+    "CategoryId": 1,
+    "BrandId": 4,
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 250,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/sb-react1.png"
+  },
+  {
+    "Name": "Typescript Entry Board",
+    "CategoryId": 1,
+    "BrandId": 5,
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    "Price": 120,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/sb-ts1.png"
+  },
+  {
+    "Name": "Core Blue Hat",
+    "CategoryId": 2,
+    "BrandId": 2,
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 10,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/hat-core1.png"
+  },
+  {
+    "Name": "Green React Woolen Hat",
+    "CategoryId": 2,
+    "BrandId": 4,
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 8,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/hat-react1.png"
+  },
+  {
+    "Name": "Purple React Woolen Hat",
+    "CategoryId": 2,
+    "BrandId": 4,
+    "Description": "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 15,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/hat-react2.png"
+  },
+  {
+    "Name": "Blue Code Gloves",
+    "CategoryId": 4,
+    "BrandId": 3,
+    "Description": "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
+    "Price": 18,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/glove-code1.png"
+  },
+  {
+    "Name": "Green Code Gloves",
+    "CategoryId": 4,
+    "BrandId": 3,
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 15,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/glove-code2.png"
+  },
+  {
+    "Name": "Purple React Gloves",
+    "CategoryId": 4,
+    "BrandId": 4,
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.",
+    "Price": 16,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/glove-react1.png"
+  },
+  {
+    "Name": "Green React Gloves",
+    "CategoryId": 4,
+    "BrandId": 4,
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 14,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/glove-react2.png"
+  },
+  {
+    "Name": "Redis Red Boots",
+    "CategoryId": 3,
+    "BrandId": 6,
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 250,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/boot-redis1.png"
+  },
+  {
+    "Name": "Core Red Boots",
+    "CategoryId": 3,
+    "BrandId": 2,
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+    "Price": 189.99,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/boot-core2.png"
+  },
+  {
+    "Name": "Core Purple Boots",
+    "CategoryId": 3,
+    "BrandId": 2,
+    "Description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
+    "Price": 199.99,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/boot-core1.png"
+  },
+  {
+    "Name": "Angular Purple Boots",
+    "CategoryId": 3,
+    "BrandId": 1,
+    "Description": "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+    "Price": 150,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/boot-ang2.png"
+  },
+  {
+    "Name": "Angular Blue Boots",
+    "CategoryId": 3,
+    "BrandId": 1,
+    "Description": "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
+    "Price": 180,
+    "InStock": true,
+    "TimeStamp": "2023-10-24T10:15:00",
+    "PhotoUrl": "images/boot-ang1.png"
+  }
+]

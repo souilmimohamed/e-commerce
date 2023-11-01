@@ -1,0 +1,53 @@
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="{{ product && product.PhotoUrl }}"
+        alt="Product Image"
+        class="img-fluid"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ product && product.Name }}</h5>
+        <p class="card-text">{{ product && product.Description }}</p>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Price: ${{ product && product.Price }}
+          </li>
+          <li class="list-group-item">
+            Category: {{ product && product.Category }}
+          </li>
+          <li class="list-group-item">Rating: 4.5 stars</li>
+          <li class="list-group-item">Availability: In Stock</li>
+        </ul>
+        <div class="d-flex justify-content-evenly mt-3">
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="onAddToCart(product!)"
+          >
+            <i class="bi bi-cart-plus"></i>
+            Add to Cart
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="onAddToWishlist(product!.Id)"
+          >
+            Add to Wishlist
+            <i class="bi bi-heart-fill"></i>
+          </button>
+          <a
+            type="button"
+            class="btn btn-secondary"
+            [routerLink]="['details', product && product.Id]"
+          >
+            Details
+            <i class="bi bi-list-task"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

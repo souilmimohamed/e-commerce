@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light pb-4">
+  <a class="navbar-brand" href="#">E-Commerce</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item" *ngIf="loggedIn$ | async">
+        <a class="nav-link" routerLink="/cart" routerLinkActive="active"
+          >Cart
+          <span class="badge badge-success" *ngIf="cart$ | async as cart">{{
+            cart.length
+          }}</span></a
+        >
+      </li>
+      <li class="nav-item" *ngIf="loggedIn$ | async">
+        <a class="nav-link" routerLink="/wishlist" routerLinkActive="active"
+          >Wishlist</a
+        >
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <a
+        class="btn btn-success mx-2"
+        routerLink="/user/register"
+        *ngIf="!(loggedIn$ | async)"
+        >Register</a
+      >
+      <a
+        class="btn btn-primary my-2 my-sm-0"
+        routerLink="/user/login"
+        *ngIf="!(loggedIn$ | async)"
+        >Login</a
+      >
+      <a
+        class="btn btn-danger my-2 my-sm-0"
+        *ngIf="loggedIn$ | async"
+        (click)="logout()"
+        >Logout</a
+      >
+    </div>
+  </div>
+</nav>
+<div class="container col-12 mt-5">
+  <router-outlet></router-outlet>
+</div>
+<ngx-spinner>Loading...</ngx-spinner>

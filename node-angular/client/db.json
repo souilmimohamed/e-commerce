@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "author": "J.K. Rowling",
+      "name": "Harry Potter and the Philosopher's Stone",
+      "cost": 15.99,
+      "image": "/assets/images/1.jpg"
+    },
+    {
+      "id": 2,
+      "author": "J.R.R. Tolkien",
+      "name": "The Lord of the Rings",
+      "cost": 24.99,
+      "image": "/assets/images/2.jpg"
+    },
+    {
+      "id": 3,
+      "author": "George R.R. Martin",
+      "name": "A Game of Thrones",
+      "cost": 18.99,
+      "image": "/assets/images/3.jpg"
+    },
+    {
+      "id": 4,
+      "author": "Harper Lee",
+      "name": "To Kill a Mockingbird",
+      "cost": 12.99,
+      "image": "/assets/images/4.jpg"
+    },
+    {
+      "id": 5,
+      "author": "Stephen King",
+      "name": "The Shining",
+      "cost": 14.99,
+      "image": "/assets/images/5.jpg"
+    },
+    {
+      "id": 6,
+      "author": "Agatha Christie",
+      "name": "Murder on the Orient Express",
+      "cost": 10.99,
+      "image": "/assets/images/6.jpg"
+    }
+  ]
+}
